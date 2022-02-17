@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+/* Clases Generales */
+.margin-containers {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+/* Navbar */
+
+.navbar {
+    padding: 20px;
+    border-bottom: 2px solid rgba(160, 160, 160, 0.247);
+}
+
+#img-logo {
+    height: 40px;
+}
+
+#li-active  a{
+    border-bottom: 2px solid rgb(31, 222, 130);
+}
+
+.navbar a{
+    padding: 0;
+    color: rgba(99, 99, 99, 0.89);
+    font-size: 1.2em;
+}
+
+.navbar-nav > li {
+    padding: 10px 15px;
+}
+
+.navbar-nav > li > a{
+    padding: 5px 0 5px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-nav > li > a:hover {
+    border-bottom: 2px solid rgb(31, 222, 130);
+    background-color: #fff;
+}
+
+.navbar-header > button > span{
+    background-color: rgb(99, 99, 99);
+}
+
+/* Section 1 */
+.jumbotron {
+    background-color: #fff;
+}
+
+.jumbotron a{
+    margin: 5px 0;
+}
+
+.jumbotron a:first-child{
+    background-color: rgb(31, 222, 130);
+    color: #fff;
+}
+
+.jumbotron h1,h3{
+    color: rgba(99, 99, 99, 0.89);
+}
+
+/* Section 2 */
+.row .jumbotron>span{
+    background-color: rgb(31, 222, 130);
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    padding-top: 24px;
+    padding-bottom: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.8em;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.margin-containers .jumbotron {
+    border-radius: 4px;
+    box-shadow: 6px 5px 30px 30px rgba(218, 218, 218, 0.795);
+}
+
+.margin-containers .jumbotron h3{
+    padding: 20px 0;
+}
+
+.margin-containers .jumbotron a{
+    background-color: #fff;
+    color: black;
+    font-weight: 600;
+    padding: 0;
+}
+
+.margin-containers h2 {
+    color: rgb(65, 65, 65);;
+    font-weight: 300;
+}
+
+/* Latest Projects */
+section {
+    background-color: rgb(231, 239, 255);
+}
+
+section img{
+    filter: blur(5px) grayscale(90%);
+}
+
+section img:hover{
+    animation: filterImg 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Footer */
+.footer h4,p{
+    display: inline;
+}
+.footer h3{
+    color: rgb(65, 65, 65);
+}
+
+#logo-footer{
+    width: 175px;
+    cursor: pointer;
+}
+
+.contact-footer {
+    color: rgb(31, 222, 130);
+}
+
+/* Social transform */
+.menu {
+    margin-top: 10px;
+    display: flex;
+    padding-left: 0;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li {
+    list-style: none;
+    margin-right: 3px;
+}
+   
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+   
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+   
+.menu a:hover span:last-child {
+    transform: none;
+}
+
+.menu[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+  }
+
+.menu img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+
+
+/* Animaciones */
+@keyframes filterImg {
+    0%{
+        filter: blur(3.5px) grayscale(70%);
+    }
+    100%{
+        filter: blur(0) grayscale(0);
+    }
+}
